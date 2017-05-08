@@ -11,7 +11,7 @@ var PORT = process.env.PORT || 8080;
 app.use(express.static(__dirname + "/public"));
  
  // data parsing
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // POST Method
 app.use(methodOverride("_method"));
@@ -27,5 +27,4 @@ app.listen(PORT, function (){
 });
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/burgerControl.js");
-app.use("/", routes);
+require("./routes/api-routes.js")(app);
