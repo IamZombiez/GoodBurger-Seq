@@ -1,0 +1,11 @@
+body {
+	background-image: url('/assets/img/burger_bg.png');
+}
+
+#addheader, #titleheader, #eaten, #uneaten {
+	text-align: center;
+}
+
+#eaten, #uneaten {
+	
+}
