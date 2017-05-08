@@ -1,6 +1,8 @@
+const Sequelize = require('sequelize');
+
 module.exports = function(sequelize, DataTypes) {
   var Burgers = sequelize.define("Burgers", {
-    burger: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
