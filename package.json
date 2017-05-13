@@ -1,22 +1,8 @@
 {
-  "name": "goodburger",
+  "name": "goodburger-seq",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/IamZombiez/GoodBurger.git"
-  },
-  "author": "ds",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/IamZombiez/GoodBurger/issues"
-  },
-  "homepage": "https://github.com/IamZombiez/GoodBurger#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
@@ -25,5 +11,20 @@
     "mysql": "^2.13.0",
     "node-sass": "^4.5.2",
     "sequelize": "^3.30.4"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamZombiez/GoodBurger-Seq.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IamZombiez/GoodBurger-Seq/issues"
+  },
+  "homepage": "https://github.com/IamZombiez/GoodBurger-Seq#readme"
 }

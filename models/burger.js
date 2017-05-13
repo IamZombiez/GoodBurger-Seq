@@ -12,11 +12,12 @@ module.exports = function(sequelize, DataTypes) {
     eaten: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
-    },
-    myTime: {
-      type: DataTypes.DATE,
-      defaultValue: Sequelize.NOW
     }
+    
+    // myTime: {
+    //   type: DataTypes.DATE,
+    //   defaultValue: Sequelize.NOW
+    // }
 
   });
   return Burgers;

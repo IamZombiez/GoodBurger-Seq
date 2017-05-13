@@ -13,11 +13,12 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET Route
-  app.get("/", function(req, res) {
-    db.Burgers.findAll({}).then(function(dbcb) {
-      res.json(dbcb);
-    });
-  });
+  // app.get("/", function(req, res) {
+  //   db.Burgers.findAll({
+  //   }).then(function(dbcb) {
+  //     res.json(dbcb);
+  //   });
+  // });
 
   // POST Route
   app.post("/", function(req, res) {
@@ -31,3 +32,4 @@ module.exports = function(app) {
   });
 
 };
+

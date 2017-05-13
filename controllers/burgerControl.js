@@ -2,28 +2,52 @@ var express = require("express");
 var router = express.Router();
 
 var burgerData = require("../models/burger.js");
+var db = require("../models");
 
-router.get('/', function(req, res){
-	burgerData.all(function(data){
-		var hbsObject = {
-			burger: data
-		};
-		console.log(hbsObject);
-		res.render("index", hbsObject);
-	});
-});
+// router.get('/', function(req, res){
+	// burgerData.findAll(function(data){
+	// 	var hbsObject = {
+	// 		burger: data
+	// 	};
+	// 	console.log(hbsObject);
+	// 	res.render("index", hbsObject);
+	// });
+// });
 
-router.post('/', function(req, res){
-	burgerData.create([
-		"name", "eaten"
-		], 
-		[
-		req.body.name, req.body.eaten
-		], function() {
-		   res.redirect("/");
-		  });
 
-});
+    // GET Route
+  router.get("/", function(req, res) {
+    db.Burgers.findAll({
+    }).then(function(dbcb) {
+      var hbsObject = {
+        burger: dbcb
+      };
+      res.render("index", hbsObject);
+    });
+  });
+
+
+// router.post('/', function(req, res){
+// 	burgerData.create([
+// 		"name", "eaten"
+// 		], 
+// 		[
+// 		req.body.name, req.body.eaten
+// 		], function() {
+// 		   res.redirect("/");
+// 		  });
+
+// });
+
+
+  router.post("/", function(req, res) {
+    db.Burgers.create({
+      text: req.body.text,
+      eaten: req.body.eaten,
+    }).then(function(dbcb) {
+      res.json(dbcb);
+    });
+  });
 
 
 router.put("/:ID", function(req, res) {
